@@ -15,5 +15,19 @@
         <li>API REST</li>
         <li>Backend con algun framework de Python</li>
     </ol>
+    <h2>Aquí hay un contador</h2>
+    <p>Este contador va por: <span id="contador">0</span></p>
+    <button id="boton">Boton para incrementar</button>
+    <script>
+        const contador = document.querySelector('#contador')
+        const boton = document.querySelector('#boton')
+
+        function sumarUnoAlContador () {
+            const numeroDelContador = parseInt(contador.innerHTML)
+            contador.innerHTML = numeroDelContador + 1
+        }
+        
+        boton.addEventListener("click", sumarUnoAlContador)
+    </script>
 </body>
 </html>
